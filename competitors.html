@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Competitor Analysis &middot; All Aspects Roofing &middot; AG1 Consulting</title><style>
+:root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--mut:#9aa7b4;--line:#2a3340;--accent:#2f81f7;
+  --good:#3fb950;--bad:#f85149;--gradF:#f85149;--gradD:#e8702a;--gradC:#d29922;--gradB:#3fb950;--gradA:#2ea043;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--mut);font-weight:600}
+header{padding:46px 0 28px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 400px at 70% -10%,rgba(47,129,247,.18),transparent)}
+h1{font-size:30px;font-weight:800;margin:10px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:15px}
+.hero{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center;margin:34px 0 8px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.gradecard{border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;position:relative;overflow:hidden}
+.gc-F{background:linear-gradient(160deg,#2a1410,#1c2330)}.gc-D{background:linear-gradient(160deg,#2a1c10,#1c2330)}
+.gc-C{background:linear-gradient(160deg,#2a2410,#1c2330)}.gc-B{background:linear-gradient(160deg,#102a1a,#1c2330)}
+.bigletter{font-size:96px;font-weight:900;line-height:1;position:relative}
+.bl-F{color:var(--gradF);text-shadow:0 0 40px rgba(248,81,73,.45)}
+.bl-D{color:var(--gradD);text-shadow:0 0 40px rgba(232,112,42,.45)}
+.bl-C{color:var(--gradC);text-shadow:0 0 40px rgba(210,153,34,.45)}
+.score100{font-size:18px;color:var(--mut);margin-top:6px;position:relative}
+.heroread h2{font-size:21px;font-weight:800;margin-bottom:10px}
+.heroread p{color:var(--mut);font-size:15.5px}
+.heroread .tag{display:inline-block;margin-top:14px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--ink);background:var(--panel)}
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+.h{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.row{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.rname{font-weight:600;font-size:15px}
+.bar{height:7px;background:#0b0f15;border-radius:99px;margin-top:9px;overflow:hidden}
+.fill{height:100%;border-radius:99px}
+.badge{font-weight:800;font-size:15px;min-width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#0d1117}
+.gF{background:var(--gradF)}.gD{background:var(--gradD)}.gC{background:var(--gradC)}.gB{background:var(--gradB);color:#06210f}.gA{background:var(--gradA);color:#06210f}
+.sc{font-size:12px;color:var(--mut);margin-top:3px}
+.flag{background:linear-gradient(160deg,#2a1410,#161b22);border:1px solid #6f2a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.flag .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--bad);font-weight:700;margin-bottom:8px}
+.win{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.win .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--good);font-weight:700;margin-bottom:8px}
+.warn{background:linear-gradient(160deg,#2a2410,#161b22);border:1px solid #6f5a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.warn .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--gradC);font-weight:700;margin-bottom:8px}
+.flag p,.win p,.warn p{color:var(--mut);font-size:14.5px;margin-bottom:9px}
+.flag p:last-child,.win p:last-child,.warn p:last-child{margin-bottom:0}
+.flag b,.win b,.warn b{color:var(--ink)}
+.flag ul,.win ul,.warn ul{margin:0 0 9px 20px;color:var(--mut);font-size:14.5px}
+.flag li,.win li,.warn li{margin-bottom:6px}
+.code{background:#0b0f15;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12.5px;line-height:1.85;color:var(--mut);overflow-x:auto}
+.code .ph{color:#ff9d94;font-weight:700}.code .ok{color:#84e0a8;font-weight:700}.code .c{color:#5b6672}
+.cmp{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp th{text-align:left;padding:11px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--line);font-weight:700}
+.cmp td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--mut);vertical-align:top}
+.cmp tr:last-child td{border-bottom:none}.cmp td b{color:var(--ink)}.cmp tr.you td{background:#241a12}
+.cmp .yes{color:var(--good);font-weight:700}.cmp .no{color:var(--bad);font-weight:700}
+.opp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.opp{grid-template-columns:1fr}}
+.ocard{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px;text-align:center}
+.ocard .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut)}
+.ocard .big{font-size:30px;font-weight:900;color:var(--good);margin:8px 0 2px}
+.ocard .small{font-size:13px;color:var(--mut)}
+.oppnote{color:var(--mut);font-size:14px;margin-top:14px}.oppnote b{color:var(--ink)}
+.arrow{display:flex;align-items:center;justify-content:center;gap:18px;margin:6px 0 2px;flex-wrap:wrap}
+.pill{font-size:60px;font-weight:900;line-height:1}
+.pill.from-F{color:var(--gradF)}.pill.from-D{color:var(--gradD)}.pill.from-C{color:var(--gradC)}
+.pill.to{color:var(--gradA)}
+.pilllab{font-size:12px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.1em}
+.ar{font-size:34px;color:var(--mut)}
+ul.road{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:760px){ul.road{grid-template-columns:1fr}}
+ul.road li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:14.5px}
+.road2 li{border-left-color:var(--good)}
+.cta{text-align:center;padding:40px 0 56px}
+.cta h2{font-size:22px;font-weight:800;margin-bottom:8px}
+.cta p{color:var(--mut);font-size:15px}
+footer{color:var(--mut);font-size:12.5px;text-align:center;padding:22px 0 40px;line-height:1.7}
+.gscale{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 26px 20px;margin-top:16px}
+.gscale .gtitle{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:700;margin-bottom:26px;text-align:center}
+.gtrack{position:relative;height:14px;border-radius:8px;background:linear-gradient(90deg,#f85149 0%,#f85149 18%,#e3833c 34%,#d4a72c 52%,#7ec46a 74%,#3fb950 100%);margin:0 4px}
+.gmark{position:absolute;top:-46px;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.gmark .gm-lab{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);font-weight:700}
+.gmark .gm-val{font-size:19px;font-weight:900;line-height:1.15}
+.gmark:after{content:"";position:absolute;left:50%;top:100%;width:2px;height:22px;transform:translateX(-50%);background:currentColor;opacity:.75}
+.gmark.now{color:var(--bad)}.gmark.now .gm-val{color:var(--bad)}
+.gmark.proj{color:var(--good)}.gmark.proj .gm-val{color:var(--good)}
+.gmark.proj{top:auto;bottom:-52px}
+.gmark.proj:after{top:auto;bottom:100%}
+.gdot{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);border:3px solid #0d1117}
+.gdot.now{background:var(--bad)}.gdot.proj{background:var(--good)}
+.gticks{display:flex;justify-content:space-between;margin:66px 4px 0;font-size:11px;letter-spacing:.08em;color:var(--mut);font-weight:700}
+@media(max-width:620px){.gmark .gm-lab{font-size:9px}.gmark .gm-val{font-size:16px}}
+
+.agnav{position:sticky;top:0;z-index:60;background:rgba(13,17,23,.93);backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
+.agnav .inner{max-width:1080px;margin:0 auto;padding:0 22px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.agnav .inner::-webkit-scrollbar{display:none}
+.agnav a{flex:0 0 auto;padding:13px 12px;font-size:13.5px;font-weight:600;color:var(--mut);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap}
+.agnav a:hover{color:var(--ink)}
+.agnav a.on{color:var(--accent);border-bottom-color:var(--accent)}
+.agnav a.ext{opacity:.8}
+@media(max-width:640px){.agnav .inner{padding:0 14px}.agnav a{padding:12px 10px;font-size:13px}}
+</style></head><body><nav class="agnav"><div class="inner"><a href="assets.html">All Assets</a><a href="./">Audit</a><a href="competitors.html" class="on">Competitors</a><a href="https://andrei170.github.io/ab-sessions-demo/" class="ext" target="_blank" rel="noopener">Concept Site &#8599;</a></div></nav>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Competitor Analysis &middot; Roofing &middot; Frome, Somerset &amp; West Wiltshire</div>
+    <div class="sub">Prepared for Riley Wheatley &middot; All Aspects Roofing &amp; Building Ltd &middot; 25 September 2026 &middot; AG1 Consulting</div>
+    <h1>One Of Your Competitors Publishes 5,941 Pages. They Are 97% Identical To Each Other. Nobody Is Winning This.</h1>
+
+    <div class="hero">
+      <div class="gradecard gc-F">
+        <div class="bigletter bl-F" style="font-size:34px">5,941</div>
+        <div class="score100">pages published by JA Roofing &mdash; against your 402</div>
+      </div>
+      <div class="heroread">
+        <h2>Before anybody sells you more pages, you should know what the page race actually looks like in your market.</h2>
+        <p>We compared two of JA Roofing's town pages word by word: <b>1,825 of 1,874 unique words shared &mdash;
+        97%.</b> Same template, different town, 5,941 times.</p>
+        <p><b>You are playing the same game at a fifteenth of the scale. That is not a fight worth winning.</b></p>
+        <div class="tag">Read from each firm's own site and sitemap, 25 September 2026</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="h">The Comparison</div>
+    <div style="overflow-x:auto">
+    <table class="cmp">
+      <tr>
+        <th></th>
+        <th>JA Roofing<br><span style="font-weight:400;opacity:.7">Somerset &amp; Wilts</span></th>
+        <th>C.H. Roofing<br><span style="font-weight:400;opacity:.7">since 2007</span></th>
+        <th>LH Roofing<br><span style="font-weight:400;opacity:.7">Westbury</span></th>
+        <th class="you">All Aspects</th>
+      </tr>
+      <tr><td><b>Pages published</b></td><td class="no">5,941</td><td>3</td><td>54</td><td><b>402</b></td></tr>
+      <tr><td><b>Town pages templated?</b></td><td class="no">Yes &mdash; 97% identical</td><td>n/a</td><td>Not checked</td><td class="no"><b>Yes &mdash; ~100%</b></td></tr>
+      <tr><td><b>Homepage words</b></td><td>1,898</td><td class="yes">4,691</td><td>590</td><td><b>1,258</b></td></tr>
+      <tr><td><b>Working analytics</b></td><td class="no">None found</td><td class="no">None found</td><td class="no">Dead UA tag</td><td class="you"><b>Google tag live</b></td></tr>
+      <tr><td><b>Meta pixel</b></td><td class="no">Not found</td><td class="no">Not found</td><td class="no">Not found</td><td class="no"><b>Not found</b></td></tr>
+      <tr><td><b>Tappable phone</b></td><td class="yes">8</td><td class="no">0</td><td>2</td><td class="you"><b>4</b></td></tr>
+      <tr><td><b>Structured data</b></td><td>Not assessed</td><td>Not assessed</td><td>Not assessed</td><td class="you"><b>Org, hours, geo, offers</b></td></tr>
+    </table>
+    </div>
+    <div class="tag" style="margin-top:12px">"Not found" records what a static read of each firm's homepage returned on 25 September 2026 and is not proof of absence. <b>Bath &amp; Wiltshire Roofing appeared in search results but its domain did not resolve at all when we checked, so it is not in this table.</b> We did not test whether LH Roofing's pages are templated.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">The Page Race Is A Trap, And You Are Already In It</div>
+    <div class="flag">
+      <div class="lab">Somebody has sold this tactic to your whole market</div>
+      <p><b>JA Roofing publishes 5,941 pages built as <code>/[service]/[town]</code>.</b> We pulled two at random
+      &mdash; Axbridge and Crewkerne &mdash; and they share 97% of their unique vocabulary. <b>It is one page with the
+      town swapped, nearly six thousand times.</b></p>
+      <p><b>You have 402 doing the same thing.</b> Neither of you built those by hand.</p>
+      <p><b>Here is why this matters for what you spend next.</b> If somebody offers to grow your site to a thousand or
+      five thousand pages, understand what you would be buying: more copies of a page Google already has. The firm with
+      5,941 has not solved anything &mdash; they have just spent more on the same bet.</p>
+      <p><b>The way out is not more pages. It is fewer, real ones</b> &mdash; for the towns you actually work in, with
+      your own jobs and photographs on them. Thirty genuine town pages will outperform four hundred copied ones, and
+      they cost less to maintain.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">What Nobody In This Market Is Doing</div>
+    <div class="win">
+      <div class="lab">This is where the actual advantage is, and it is cheap</div>
+      <ul>
+        <li><b>You are the only firm here with working analytics.</b> JA Roofing has none. C.H. Roofing has none. LH
+        Roofing has a <b>Universal Analytics tag</b> &mdash; that platform stopped processing data in <b>July
+        2023</b>, so it has collected nothing for over three years while presumably looking installed.</li>
+        <li><b>Nobody has a Meta pixel.</b> Not one firm in this comparison. Whatever any of you spend on Facebook or
+        Instagram is unmeasured and unretargetable.</li>
+        <li><b>C.H. Roofing publishes 4,691 words on its homepage and has no tappable phone number at all.</b> The
+        longest page in the market and no way to ring them from a mobile.</li>
+        <li><b>Bath &amp; Wiltshire Roofing's website does not resolve.</b> They appear in search results and the
+        domain is dead.</li>
+        <li><b>You have proper structured data</b> &mdash; organisation, opening hours, geographic coordinates, offers.
+        We did not find that depth anywhere else here.</li>
+      </ul>
+      <p style="margin-top:10px"><b>So the gap in this market is not content. It is that nobody can tell what is
+      working.</b> You are one call-tracking install away from being the only firm in Frome who knows which channel
+      produces which job.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">What We Could Not Check</div>
+    <div class="warn">
+      <div class="lab">Marked honestly rather than guessed</div>
+      <ul>
+        <li><b>Whether LH Roofing's 54 pages are templated.</b> We tested JA Roofing and yours; we did not test theirs.</li>
+        <li><b>Structured data on the three competitors.</b> We read homepages for tags and phone links, not their full markup.</li>
+        <li><b>Everyone's Google Business Profile, reviews and map position</b>, including yours. On local roofing that
+        is where a great deal of enquiry begins and we have no reliable way to measure it.</li>
+        <li><b>What anybody spends on advertising, or what it returns</b>, including you. The absence of a pixel tells
+        us a tag is missing, nothing more.</li>
+        <li><b>Anyone's revenue, crew size, pricing or win rate</b>, including yours.</li>
+        <li><b>Every roofer in Somerset and West Wiltshire.</b> This is the set a search returned and we could verify
+        &mdash; not a census.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Four firms, roughly six and a half thousand pages between them, and one working analytics tag. Yours.</h2>
+    <p>The advantage here was never going to be page count.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Prepared by Andrei Givero &middot; AG1 Consulting &middot; 25 September 2026<br><br>
+    For Riley Wheatley, All Aspects Roofing &amp; Building Ltd. <b>VERIFIED BY AG1, ALL REPRODUCIBLE: sitemap entry
+    counts of 5,941 for jaroofingconstructions.co.uk, 54 for lhroofing.co.uk, 3 for chroofingservices.co.uk and 402 for
+    allaspects247.co.uk; homepage word counts of 1,898, 590, 4,691 and 1,258 respectively, taken after removing script,
+    style and comment blocks; tappable telephone link counts of 8, 2, 0 and 4; and the analytics and pixel findings
+    stated. The Universal Analytics identifier UA-112671664-1 was read from lhroofing.co.uk. All read on 25 September
+    2026.</b> <b>The JA Roofing similarity figure comes from AG1 downloading two of their town pages &mdash;
+    /affordable-roofing/axbridge and /affordable-roofing/crewkerne &mdash; stripping the markup and comparing unique
+    vocabulary: 1,825 of 1,874 unique words shared. Two pages is a sample, not the whole site, and we did not test
+    every page.</b> <b>The statement that Universal Analytics stopped processing data in July 2023 is a matter of
+    public record from Google; we make no claim about whether LH Roofing uses any other measurement we did not
+    detect.</b> <b>bathandwiltsroofing.co.uk did not resolve by DNS when we checked on that date. We make no claim
+    about the business behind it, which may be trading normally under another domain.</b> Cells marked "not found" or
+    "not assessed" record what our checks returned on that date and must not be read as proof of absence; tags may load
+    after render or on pages we did not read, and we did not read every firm's full markup. <b>The presence or absence
+    of an advertising tag is not evidence of any advertising spend, campaign or result, for any firm including yours.</b>
+    <b>Statements about how Google treats duplicated or mass-produced pages are a general description of its published
+    guidance as we understand it; Google's policies change without notice and are applied at its discretion. Nothing
+    here states that any site has been penalised, and no ranking has been measured for anyone.</b> <b>No company's
+    revenue, staffing, pricing, win rate, licensing, insurance or workmanship has been assessed, and nothing whatsoever
+    is claimed or implied about any of them.</b> <b>No Google Business Profile, map position or review count has been
+    measured for any firm, including All Aspects Roofing &amp; Building Ltd.</b> <b>⚠ No ranking, enquiry volume,
+    market share, conversion or revenue outcome is forecast or promised anywhere in this document.</b> Nothing here is
+    a comment on the competence, conduct or standing of any named business; company names are used for identification
+    only and belong to their respective owners. The commentary and any judgements are AG1's own editorial opinion.
+  </div>
+</footer>
+</body></html>
