@@ -1,0 +1,331 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Website Audit &middot; All Aspects Roofing &middot; AG1 Consulting</title><style>
+:root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--mut:#9aa7b4;--line:#2a3340;--accent:#2f81f7;
+  --good:#3fb950;--bad:#f85149;--gradF:#f85149;--gradD:#e8702a;--gradC:#d29922;--gradB:#3fb950;--gradA:#2ea043;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--mut);font-weight:600}
+header{padding:46px 0 28px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 400px at 70% -10%,rgba(47,129,247,.18),transparent)}
+h1{font-size:30px;font-weight:800;margin:10px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:15px}
+.hero{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center;margin:34px 0 8px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.gradecard{border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;position:relative;overflow:hidden}
+.gc-F{background:linear-gradient(160deg,#2a1410,#1c2330)}.gc-D{background:linear-gradient(160deg,#2a1c10,#1c2330)}
+.gc-C{background:linear-gradient(160deg,#2a2410,#1c2330)}.gc-B{background:linear-gradient(160deg,#102a1a,#1c2330)}
+.bigletter{font-size:96px;font-weight:900;line-height:1;position:relative}
+.bl-F{color:var(--gradF);text-shadow:0 0 40px rgba(248,81,73,.45)}
+.bl-D{color:var(--gradD);text-shadow:0 0 40px rgba(232,112,42,.45)}
+.bl-C{color:var(--gradC);text-shadow:0 0 40px rgba(210,153,34,.45)}
+.score100{font-size:18px;color:var(--mut);margin-top:6px;position:relative}
+.heroread h2{font-size:21px;font-weight:800;margin-bottom:10px}
+.heroread p{color:var(--mut);font-size:15.5px}
+.heroread .tag{display:inline-block;margin-top:14px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--ink);background:var(--panel)}
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+.h{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.row{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.rname{font-weight:600;font-size:15px}
+.bar{height:7px;background:#0b0f15;border-radius:99px;margin-top:9px;overflow:hidden}
+.fill{height:100%;border-radius:99px}
+.badge{font-weight:800;font-size:15px;min-width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#0d1117}
+.gF{background:var(--gradF)}.gD{background:var(--gradD)}.gC{background:var(--gradC)}.gB{background:var(--gradB);color:#06210f}.gA{background:var(--gradA);color:#06210f}
+.sc{font-size:12px;color:var(--mut);margin-top:3px}
+.flag{background:linear-gradient(160deg,#2a1410,#161b22);border:1px solid #6f2a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.flag .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--bad);font-weight:700;margin-bottom:8px}
+.win{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.win .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--good);font-weight:700;margin-bottom:8px}
+.warn{background:linear-gradient(160deg,#2a2410,#161b22);border:1px solid #6f5a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.warn .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--gradC);font-weight:700;margin-bottom:8px}
+.flag p,.win p,.warn p{color:var(--mut);font-size:14.5px;margin-bottom:9px}
+.flag p:last-child,.win p:last-child,.warn p:last-child{margin-bottom:0}
+.flag b,.win b,.warn b{color:var(--ink)}
+.flag ul,.win ul,.warn ul{margin:0 0 9px 20px;color:var(--mut);font-size:14.5px}
+.flag li,.win li,.warn li{margin-bottom:6px}
+.code{background:#0b0f15;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12.5px;line-height:1.85;color:var(--mut);overflow-x:auto}
+.code .ph{color:#ff9d94;font-weight:700}.code .ok{color:#84e0a8;font-weight:700}.code .c{color:#5b6672}
+.cmp{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp th{text-align:left;padding:11px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--line);font-weight:700}
+.cmp td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--mut);vertical-align:top}
+.cmp tr:last-child td{border-bottom:none}.cmp td b{color:var(--ink)}.cmp tr.you td{background:#241a12}
+.cmp .yes{color:var(--good);font-weight:700}.cmp .no{color:var(--bad);font-weight:700}
+.opp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.opp{grid-template-columns:1fr}}
+.ocard{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px;text-align:center}
+.ocard .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut)}
+.ocard .big{font-size:30px;font-weight:900;color:var(--good);margin:8px 0 2px}
+.ocard .small{font-size:13px;color:var(--mut)}
+.oppnote{color:var(--mut);font-size:14px;margin-top:14px}.oppnote b{color:var(--ink)}
+.arrow{display:flex;align-items:center;justify-content:center;gap:18px;margin:6px 0 2px;flex-wrap:wrap}
+.pill{font-size:60px;font-weight:900;line-height:1}
+.pill.from-F{color:var(--gradF)}.pill.from-D{color:var(--gradD)}.pill.from-C{color:var(--gradC)}
+.pill.to{color:var(--gradA)}
+.pilllab{font-size:12px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.1em}
+.ar{font-size:34px;color:var(--mut)}
+ul.road{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:760px){ul.road{grid-template-columns:1fr}}
+ul.road li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:14.5px}
+.road2 li{border-left-color:var(--good)}
+.cta{text-align:center;padding:40px 0 56px}
+.cta h2{font-size:22px;font-weight:800;margin-bottom:8px}
+.cta p{color:var(--mut);font-size:15px}
+footer{color:var(--mut);font-size:12.5px;text-align:center;padding:22px 0 40px;line-height:1.7}
+.gscale{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 26px 20px;margin-top:16px}
+.gscale .gtitle{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:700;margin-bottom:26px;text-align:center}
+.gtrack{position:relative;height:14px;border-radius:8px;background:linear-gradient(90deg,#f85149 0%,#f85149 18%,#e3833c 34%,#d4a72c 52%,#7ec46a 74%,#3fb950 100%);margin:0 4px}
+.gmark{position:absolute;top:-46px;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.gmark .gm-lab{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);font-weight:700}
+.gmark .gm-val{font-size:19px;font-weight:900;line-height:1.15}
+.gmark:after{content:"";position:absolute;left:50%;top:100%;width:2px;height:22px;transform:translateX(-50%);background:currentColor;opacity:.75}
+.gmark.now{color:var(--bad)}.gmark.now .gm-val{color:var(--bad)}
+.gmark.proj{color:var(--good)}.gmark.proj .gm-val{color:var(--good)}
+.gmark.proj{top:auto;bottom:-52px}
+.gmark.proj:after{top:auto;bottom:100%}
+.gdot{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);border:3px solid #0d1117}
+.gdot.now{background:var(--bad)}.gdot.proj{background:var(--good)}
+.gticks{display:flex;justify-content:space-between;margin:66px 4px 0;font-size:11px;letter-spacing:.08em;color:var(--mut);font-weight:700}
+@media(max-width:620px){.gmark .gm-lab{font-size:9px}.gmark .gm-val{font-size:16px}}
+
+.agnav{position:sticky;top:0;z-index:60;background:rgba(13,17,23,.93);backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
+.agnav .inner{max-width:1080px;margin:0 auto;padding:0 22px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.agnav .inner::-webkit-scrollbar{display:none}
+.agnav a{flex:0 0 auto;padding:13px 12px;font-size:13.5px;font-weight:600;color:var(--mut);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap}
+.agnav a:hover{color:var(--ink)}
+.agnav a.on{color:var(--accent);border-bottom-color:var(--accent)}
+.agnav a.ext{opacity:.8}
+@media(max-width:640px){.agnav .inner{padding:0 14px}.agnav a{padding:12px 10px;font-size:13px}}
+</style></head><body><nav class="agnav"><div class="inner"><a href="assets.html">All Assets</a><a href="./" class="on">Audit</a><a href="competitors.html">Competitors</a><a href="https://andrei170.github.io/ab-sessions-demo/" class="ext" target="_blank" rel="noopener">Concept Site &#8599;</a></div></nav>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Website Audit &middot; All Aspects Roofing &amp; Building Ltd &middot; Frome, Somerset</div>
+    <div class="sub">Prepared for Riley Wheatley &middot; 25 September 2026 &middot; AG1 Consulting</div>
+    <h1>Your 402 Pages Are The Same Page. And Your Address Tells Google You Are In Surrey.</h1>
+
+    <div class="hero">
+      <div class="gradecard gc-F">
+        <div class="bigletter bl-F" style="font-size:38px">100%</div>
+        <div class="score100">shared wording between your Bath page and your Frome page</div>
+      </div>
+      <div class="heroread">
+        <h2>Everything below is a fact you can check yourself in about five minutes. No opinions until the last section.</h2>
+        <p>You told Ruchi you are spending around <b>&pound;10,000 on advertising</b> and you want to see results before
+        you trust anybody.</p>
+        <p><b>Fair. So here is what is actually on your site, and how to verify each item.</b></p>
+        <div class="tag">Everything read directly from your own site and the public register, 25 September 2026</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 1 &mdash; 402 Pages, One Page</div>
+    <div class="code">
+  Pages in your sitemap                <span class="ok">402</span>
+  Structure                            <span class="ok">11 services &times; ~35 towns</span>
+  Words per page                       <span class="ok">~1,400</span>
+
+  We compared four of your town pages word by word:
+
+    Bath vs Frome          <span class="ph">4,995 of 5,017 unique words shared</span>
+    Bath vs Bristol        <span class="ph">5,001 of 5,017 shared</span>
+    Bath vs Salisbury      <span class="ph">5,003 of 5,017 shared</span>
+
+  The handful of words that differ are web addresses
+  inside the page code, not readable content.
+    </div>
+    <div class="flag">
+      <div class="lab">And the page author gives it away</div>
+      <p><b>The WordPress author on those pages is called <code>template2023</code>.</b> You can see it yourself &mdash;
+      it is in the page code on every one of them.</p>
+      <p><b>Check it in two minutes:</b> open your Bath page and your Frome page side by side and read the first three
+      paragraphs of each. They are identical apart from the town name.</p>
+      <p><b>Why it matters:</b> Google is explicit that pages created mainly for search engines, with little unique
+      value, may be treated as spam. Four hundred copies of one page is the textbook example. At best they do nothing;
+      at worst they hold back the pages that would otherwise rank.</p>
+      <p class="tag">We are not telling you the site is worthless &mdash; the underlying content is decent and the
+      structure is sensible. We are telling you it was mass-produced, and that you should know that before you spend
+      anything else.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 2 &mdash; Your Address Data Says Surrey</div>
+    <div class="code">
+  The address in your website code, exactly as published:
+
+    "streetAddress"   : <span class="ph">"St Mary's Cres, Stanwell"</span>
+    "addressLocality" : <span class="ok">"Frome"</span>
+    "addressRegion"   : <span class="ok">"Somerset"</span>
+    "postalCode"      : <span class="ph">"TW19 7HU"</span>
+
+  <span class="ph">TW19 is Stanwell, Staines-upon-Thames &mdash; next to Heathrow.</span>
+  <span class="ok">Frome is BA11.</span>
+
+  Companies House, ALL ASPECTS ROOFING &amp; BUILDING LTD (17114213):
+
+    Registered office <span class="ph">54a Church Road, Ashford, Middlesex, TW15 2TS</span>
+    Incorporated      <span class="ok">24 March 2026</span>
+    </div>
+    <div class="flag">
+      <div class="lab">This is the most damaging item on the page and it is a ten-minute fix</div>
+      <p><b>Your structured data gives Google a Surrey street and postcode, and tells it that address is in Frome,
+      Somerset.</b> Those cannot both be true.</p>
+      <p><b>Structured data is one of the strongest signals Google uses to work out where a business is.</b> You are
+      running 402 pages aimed at Somerset and Wiltshire towns while the machine-readable part of your site points at a
+      postcode near Heathrow.</p>
+      <p><b>We are not assuming which is correct</b> &mdash; you may trade from Frome and have a registered office in
+      Middlesex, which is completely normal. <b>But the postcode in the schema needs to match the place you want to
+      rank in, and right now it does not.</b></p>
+      <p class="tag">Check it yourself: view the source of your homepage and search for <code>postalCode</code>.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 3 &mdash; Two Sitemaps, One Of Them Empty</div>
+    <div class="code">
+  <span class="ok">/sitemap.xml</span>       plugin-generated  &rarr;  <span class="ok">402 pages listed</span>
+  <span class="ph">/wp-sitemap.xml</span>    WordPress built-in &rarr;  <span class="ph">completely empty</span>
+    </div>
+    <div class="warn">
+      <div class="lab">Small, but it is a symptom</div>
+      <p>Two sitemap systems are running at once. The plugin one works; the WordPress one publishes an empty file.</p>
+      <p><b>It will not be costing you much</b>, but it is the kind of thing left behind when a site is built quickly
+      and never tidied.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 4 &mdash; No Enquiry Form On Your Homepage, And No Meta Pixel</div>
+    <div class="code">
+  Homepage:
+    Tappable phone numbers   <span class="ok">4</span>
+    Enquiry form             <span class="ph">none found</span>   (WPForms is installed on the site)
+
+  Tracking:
+    Google tag               <span class="ok">GT-KD2WJK84</span>   present
+    Meta pixel               <span class="ph">not found</span>
+    Google Tag Manager       <span class="ph">not found</span>
+    Call tracking            <span class="ph">not found</span>
+    </div>
+    <div class="warn">
+      <div class="lab">Two gaps, one of which matters more given what you are spending</div>
+      <p><b>Your phone numbers are properly linked on every page and that is right for roofing</b> &mdash; most repair
+      enquiries are a call. <b>But there is no form on the homepage</b>, so anybody who would rather type than talk has
+      nowhere to go. The form software is already installed.</p>
+      <p><b>And there is no Meta pixel anywhere.</b> If any part of that &pound;10,000 is going to Facebook or
+      Instagram, none of it is being measured and none of that audience is being kept for retargeting.</p>
+      <p><b>Without call tracking either</b>, you cannot currently tell which of your channels produced which job
+      &mdash; which is a difficult position to be in at that level of spend.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">What Is Genuinely Right</div>
+    <div class="win">
+      <div class="lab">We are not here to tell you everything is broken</div>
+      <ul>
+        <li><b>Proper structured data</b> &mdash; Organization, ContactPoint, GeoCoordinates, Offer and opening hours.
+        Most roofing sites have none of it. The only problem is the postcode inside it.</li>
+        <li><b>Tappable phone numbers on every page.</b> Four on the homepage.</li>
+        <li><b>Eleven real service pages</b> &mdash; chimney, commercial, EPDM, fascias and soffits, GRP flat, gutters,
+        leadwork, new roofs, pitched, leak repairs, slate. That is a full offering, properly separated.</li>
+        <li><b>A Google tag already installed and running.</b></li>
+        <li><b>The underlying writing is decent.</b> The problem is that it was copied 402 times, not that it is bad.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">The Scorecard</div>
+    <div class="grid">
+      <div class="row"><div><div class="rname">Page uniqueness</div><div class="sc">Town pages ~100% identical to each other</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Location data</div><div class="sc">Surrey postcode published as a Somerset address</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Attribution</div><div class="sc">No call tracking at ~&pound;10k of advertising</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Meta pixel</div><div class="sc">None found</div></div><div class="badge gD">D</div></div>
+      <div class="row"><div><div class="rname">Homepage form</div><div class="sc">None, though WPForms is installed</div></div><div class="badge gD">D</div></div>
+      <div class="row"><div><div class="rname">Sitemaps</div><div class="sc">Two running; the WordPress one is empty</div></div><div class="badge gC">C</div></div>
+      <div class="row"><div><div class="rname">Phone access</div><div class="sc">Four tappable numbers on the homepage</div></div><div class="badge gA">A</div></div>
+      <div class="row"><div><div class="rname">Service coverage</div><div class="sc">Eleven distinct services, each with its own page</div></div><div class="badge gA">A</div></div>
+      <div class="row"><div><div class="rname">Structured data</div><div class="sc">Organization, hours, geo, offers &mdash; rare in roofing</div></div><div class="badge gB">B</div></div>
+    </div>
+    <div class="tag" style="margin-top:12px">Two of the three red rows cost nothing to fix. The first one is a decision about 400 pages.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">What We Would Do, In Order</div>
+    <ul class="road">
+      <li><b>Fix the postcode in your structured data</b> so it matches the town you want to rank in. Ten minutes, free,
+      and it is the highest-return item here.</li>
+      <li><b>Put call tracking on.</b> At roughly &pound;10,000 of spend, not knowing which channel produced which job
+      is the most expensive gap you have.</li>
+      <li><b>Add the form to the homepage.</b> The software is already installed.</li>
+      <li><b>Decide what to do about the 402 pages.</b> Our view is to keep and properly rewrite the towns you actually
+      work in, and remove the rest &mdash; but that is a real decision and we would want your job data before
+      recommending which towns stay.</li>
+      <li><b>Add the Meta pixel</b> if any of the spend is going to Facebook or Instagram.</li>
+      <li><b>Then, and only then, look at the advertising itself.</b> There is no point optimising spend into a site
+      that is telling Google it is in Surrey.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Every number on this page can be checked from your own website in under ten minutes.</h2>
+    <p>We would rather you did check it than take our word for it.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Prepared by Andrei Givero &middot; AG1 Consulting &middot; 25 September 2026<br><br>
+    For Riley Wheatley, All Aspects Roofing &amp; Building Ltd. <b>VERIFIED BY AG1, ALL REPRODUCIBLE: the 402 entries in
+    the plugin-generated page sitemap and their structure of eleven services across approximately thirty-five towns;
+    the empty WordPress core sitemap at /wp-sitemap.xml; the four tappable telephone links and absence of an enquiry
+    form on the homepage; the Google tag GT-KD2WJK84 and the absence of any Meta pixel, tag manager or call-tracking
+    code; the Organization, ContactPoint, GeoCoordinates, Offer, OpeningHoursSpecification and PostalAddress structured
+    data; and the published address values streetAddress "St Mary's Cres, Stanwell", addressLocality "Frome",
+    addressRegion "Somerset" and postalCode "TW19 7HU" &mdash; were all read directly from allaspects247.co.uk on 25
+    September 2026.</b> <b>The page-similarity figures come from AG1 downloading four of your town pages, stripping the
+    markup, and comparing their unique vocabulary: Bath and Frome shared 4,995 of 5,017 unique words, Bath and Bristol
+    5,001, and Bath and Salisbury 5,003. The residual differences were predominantly web addresses embedded in page
+    code rather than readable text. The WordPress author name "template2023" appears in the page code of those
+    pages.</b> <b>The Companies House record for ALL ASPECTS ROOFING &amp; BUILDING LTD, company number 17114213,
+    registered office 54a Church Road, Ashford, Middlesex TW15 2TS, incorporated 24 March 2026, was read from the
+    public register on the same date. We matched it on an exact company-name match; if this is not your company, tell
+    us and we will remove it. We draw no conclusion from a registered office differing from a trading address, which is
+    entirely normal and lawful.</b> <b>We make no claim about where the business actually operates from. We report only
+    that the postcode published in your website's structured data is in the TW19 postcode area and the locality
+    published alongside it is Frome, and that these are inconsistent with each other.</b> <b>Items recorded as "not
+    found" describe what a static read of the served HTML returned on that date and are not proof of absence; tags may
+    load after render or on pages we did not read, and this should be confirmed with whoever manages your site and your
+    advertising.</b> <b>Statements about how Google treats mass-produced pages are a general description of its
+    published guidance as we understand it; Google's policies are Google's, change without notice, and are applied at
+    its discretion. Nothing here is a statement that your site has been penalised, and we have not measured any
+    ranking.</b> <b>The approximately &pound;10,000 advertising figure is as reported to AG1 and has not been verified;
+    we do not know the period it covers or which platforms it is spent on.</b> <b>No Google Business Profile, review
+    count, map position, search ranking, keyword or traffic figure has been measured, and no competitor is assessed in
+    this document.</b> <b>⚠ No enquiry, call, booked job, ranking or revenue outcome is promised, forecast or
+    guaranteed anywhere in this document.</b> Nothing here is a comment on the competence, licensing, insurance or
+    workmanship of this or any other business, nor on the work of whoever built the site, and nothing here is legal or
+    financial advice. Company and platform names are used for identification only and belong to their respective
+    owners. The grades are AG1's own editorial assessment.
+  </div>
+</footer>
+</body></html>
